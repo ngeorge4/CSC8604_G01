@@ -34,9 +34,15 @@ privacy-pac/
 │   └── [0-5].html
 └── privacy-app.py
 ├── button_press_handler.py
-├── nfc_handler.py
+├── nfc_handler.py (Works independently not simultaneously with button press handler)
 
 ├── joystick_handler.py (Not integrated)
+
+Caution: Event Stream Conflict
+    The frontend uses EventSource (SSE) to listen for continuous GPIO events.
+    The backend route /events may still attempt to send both GPIO and NFC events via a single SSE stream (from an older implementation).
+    At the same time, NFC events are also being emitted via Socket.IO.
+    This can lead to conflicts if the same event (e.g., NFC card detection) is delivered over both channels in different formats.
 ```
 
 ### 2. System Architecture
