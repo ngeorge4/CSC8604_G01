@@ -62,7 +62,7 @@ Solution: Use a button or interaction to trigger requestFullscreen().
    - Implements hybrid event system (SSE + Socket.IO)
    
 **1.B NFC Handler (nfc_handler.py)**
-  - Initializes NFC reader with py532lib
+  - Initializes NFC reader with py532lib for PN532 NFC Reader
   - Reads card UID and maps to quiz set
   - Sends event data to backend via UDP socket
   
@@ -220,12 +220,6 @@ CREATE TABLE scores (
 6. Error handling
 7. Session management
 
-#### 8.2 Performance Metrics
-1. Response time < 100ms
-2. Event processing < 50ms
-3. Page load time < 1s
-4. Zero event loss
-
 ### 9. Deployment Requirements
 
 #### 9.1 System Requirements
@@ -233,7 +227,7 @@ CREATE TABLE scores (
 - SQLite3
 - Modern web browser
 - GPIO hardware support
-- NFC reader support
+- NFC reader support 
 
 #### 9.2 Dependencies
 ```plaintext
