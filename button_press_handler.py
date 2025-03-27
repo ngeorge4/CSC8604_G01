@@ -1,9 +1,3 @@
-"""
-Privacy-Pac Button Handler
-Author: ngeorge4
-Last Updated: 2025-03-20 04:33:48 UTC
-"""
-
 try:
     import RPi.GPIO as GPIO
     import time
