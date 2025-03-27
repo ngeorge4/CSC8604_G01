@@ -9,6 +9,8 @@ privacy-pac/
 ├── database/
 │   └── quiz_data.db
 ├── static/
+│   ├── fonts/
+│   │   └── Pixeboy.ttf
 │   ├── images/
 │   │   ├── Welcome.png
 │   │   ├── Conditions.png
