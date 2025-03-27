@@ -1,9 +1,3 @@
-"""
-Privacy-Pac Flask Application
-Author: recker1103
-Current Date: 2025-03-23 20:02:12 UTC
-"""
-
 from flask import Flask, render_template, request, jsonify, send_from_directory, g, Response
 from flask_socketio import SocketIO
 import sqlite3
