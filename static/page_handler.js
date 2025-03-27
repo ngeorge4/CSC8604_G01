@@ -1,9 +1,3 @@
-/**
- * Privacy-Pac Universal Page Handler
- * Author: ngeorge4
- * Current Date: 2025-03-20 05:30:25 UTC
- */
-
 document.addEventListener("DOMContentLoaded", function() {
     // Skip if we're on the quiz page
     if (window.location.pathname === '/quiz') {
