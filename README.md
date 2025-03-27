@@ -44,6 +44,12 @@ Caution: Event Stream Conflict
     At the same time, NFC events are also being emitted via Socket.IO.
     This can lead to conflicts if the same event (e.g., NFC card detection) is delivered over both channels in different formats.
 ```
+Notes:
+Browsers block fullscreen unless triggered by a user action (e.g. click).
+Attempts to force fullscreen on page load or with setTimeout will silently fail due to browser security policies.
+Solution: Use a button or interaction to trigger requestFullscreen().
+
+**some browser extensions or security settings block persistent fullscreen**
 
 ### 2. System Architecture
 
