@@ -1,9 +1,3 @@
-"""
-Privacy-Pac NFC Handler
-Author: recker1103
-Current Date: 2025-03-24 11:38:56 UTC
-"""
-
 try:
     import nfc
     import socketio
