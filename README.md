@@ -60,10 +60,12 @@ Solution: Use a button or interaction to trigger requestFullscreen().
    - Processes NFC events
    - Handles GPIO button presses
    - Implements hybrid event system (SSE + Socket.IO)
+   -
 **1.B 1.B NFC Handler (nfc_handler.py)**
   - Initializes NFC reader with py532lib
   - Reads card UID and maps to quiz set
   - Sends event data to backend via UDP socket
+  
 **1.C GPIO Button Handler (button_press_handler.py)**
   - Monitors hardware GPIO pins
   - Detects left/right button presses
