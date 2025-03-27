@@ -1,9 +1,3 @@
-/**
- * Privacy-Pac Quiz Logic
- * Author: ngeorge4
- * Current Date: 2025-03-20 04:44:43 UTC
- */
-
 let questions = [];
 let currentIndex = 0;
 let sessionId = localStorage.getItem("sessionId") || "";
