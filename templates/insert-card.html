@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Card</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='b-style.css') }}">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Redirect to quiz.html after 3 seconds
+            setTimeout(function() {
+                window.location.href = "{{ url_for('loading') }}";
+            }, 5000);
+        });
+    </script>
+</head>
+<body>
+    <script src="{{ url_for('static', filename='fullscreen.js') }}"></script>
+    <div class="container">
+        <img src="{{ url_for('static', filename='insert-card.png') }}" class="background">
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "You install an app. It asks for location access all the time.",
+            "options": ["Allow Always", "Allow Only When in Use"]
+        },
+        {
+            "id": 2,
+            "question": "You receive a friend request from someone you don’t know.",
+            "options": ["Accept", "Ignore"]
+        },
+        {
+            "id": 3,
+            "question": "Your social media profile is set to public by default.",
+            "options": ["Keep it Public", "Set it to Private"]
+        },
+        {
+            "id": 4,
+            "question": "A website offers a 10% discount if you provide your email and phone number.",
+            "options": ["Share Info", "Decline Offer"]
+        },
+        {
+            "id": 5,
+            "question": "Your device suggests using '123456' as your new password.",
+            "options": ["Use Weak Password", "Create a Strong Password"]
+        }
+    ]
+}

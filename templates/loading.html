@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='b-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='progress.css') }}">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Redirect to quiz.html after 3 seconds
+            setTimeout(function() {
+                window.location.href = "{{ url_for('quiz') }}";
+            }, 3000);
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='bg-loading.png') }}" class="background">
+    
+        <div class="progress-container">
+            <div class="progress"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

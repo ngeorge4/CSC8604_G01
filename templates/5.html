@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Button</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-0.css') }}">
+    <script src="{{ url_for('static', filename='fullscreen.js') }}"></script>
+    <script src="{{ url_for('static', filename='page_handler.js') }}"></script>
+</head>
+<body data-gpio-enabled="true">
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='bg-5.png') }}" class="background">
+    
+        <div class="button-container">
+            
+            <button class="start-button" data-gpio="left">
+                <img src="{{ url_for('static', filename='newgame.png') }}" alt="Start Button">
+            </button>
+        
+            <button class="start-button" data-gpio="right"><!-- Added 'finish-button' class here -->
+                <img src="{{ url_for('static', filename='finish.png') }}" alt="Finish Button">
+            </button>
+           
+        </div>
+    </div>
+
+</body>
+</html>

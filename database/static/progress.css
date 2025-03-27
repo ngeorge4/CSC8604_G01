@@ -1,0 +1,29 @@
+/* Reset page defaults */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: flex-end; /* Aligns elements to the bottom */
+}
+
+/* Container for the progress bar */
+.progress-container {
+    width: 1252px; /* Width for 15 squares */
+    height: 120px;
+    background: #f7f4ff;
+    position: absolute;
+    bottom: 330px; /* 580px from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+
+    /* Pixelated border effect */
+    box-shadow: 
+        4px 0px 0px 0px #401387, -4px 0px 0px 0px #401387, 0px 4px 0px 0px #403687, 0px -4px 0px 0px #401387, 4px 4px 0px 0px #401387, -4px -4px 0px 0px; 
+}

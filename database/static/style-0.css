@@ -1,0 +1,91 @@
+/* Force Full-Screen */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Fullscreen Container */
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Image Styling */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes sure it fits fully */
+}
+
+/* Positioning for the start button container */
+.button-container {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 150px;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center buttons */
+    align-items: center;
+    gap: 130px; /* Add spacing between buttons */
+}
+
+
+/* Ensure <a> expands to fit the button */
+.button-container a {
+    display: block;
+    width: 48%; /* Same as button width */
+    height: 100%; /* Ensure the button takes full height */
+}
+
+/* Remove any default button styles */
+.start-button, .finish-button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of <a> */
+    height: 100%; /* Full height of <a> */
+}
+
+/* Button image styles */
+.start-button img, .finish-button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Hover and active states for the start button */
+.start-button:hover img {
+    content: url("/static/newgamehover1.png");
+}
+
+.start-button:active img {
+    content: url("/static/newgamehover2.png");
+}
+
+/* Hover and active states for the finish button */
+.finish-button:hover img {
+    content: url("/static/finishhover1.png");
+}
+
+.finish-button:active img {
+    content: url("/static/finishhover2.png");
+}

@@ -1,0 +1,136 @@
+/* reset default margins, paddings, and ensure full viewport coverage */
+/* Force Full-Screen */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Fullscreen Container */
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* background image styling */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes sure it fits fully */
+}
+
+/* positioning for the start button container */
+.button-container {
+    position: absolute;
+    left: 50%;
+    bottom: 190px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 70px;
+    z-index: 10; /* ensures it's in front */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* positioning for the continue button */
+.button-container-continue {
+    position: absolute;
+    bottom: 108px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 382px; /* exact width */
+    height: 166px; /* exact height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* remove any default button styles */
+.start-button, .continue-button {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    width: 80px;
+    height: 60px;
+}
+
+/* button image styles */
+.start-button img, .continue-button img {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+
+hover and active states
+.start-button:hover img {
+    content: url("/static/start-hover.png");
+}
+
+.start-button:active img {
+    content: url("/static/start-active.png");
+}
+
+
+.continue-button:active img {
+    content: url("/static/cont-active.png");
+}
+
+/* Container with pixelated edges */
+.progress-container {
+    width: 252px; /* 15 squares width */
+    height: 100px;
+    background: #f7f4ff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+
+    /* Pixelated border effect */
+    box-shadow: 
+        4px 0px 0px 0px #401387,
+        -4px 0px 0px 0px #401387,
+        0px 4px 0px 0px #401387,
+        0px -4px 0px 0px #401387,
+        4px 4px 0px 0px #401387,
+        -4px -4px 0px 0px #401387,
+        4px -4px 0px 0px #401387,
+        -4px 4px 0px 0px #401387;
+}
+
+/* Progress bar with 15 squares */
+.progress {
+    width: 100%;
+    height: 80px;
+    -webkit-mask: linear-gradient(90deg, #401387 70%, #0000 0) left/6.67% 100%;
+    mask: linear-gradient(90deg, #401387 70%, #0000 0) left/6.67% 100%;
+    background: linear-gradient(#401387 0 0) left/0% 100% no-repeat #dbdcef;
+    animation: progress-animation 8s infinite steps(15);
+}
+
+/* Progress animation */
+@keyframes progress-animation {
+    100% {
+        background-size: 160% 100%;
+    }
+}
+
+/* GPIO feedback */
+[data-gpio]:active,
+[data-gpio].active {
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: all 0.1s ease-in-out;
+}

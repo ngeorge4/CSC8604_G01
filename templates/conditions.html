@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='b-style.css') }}">
+    <script src="{{ url_for('static', filename='page_handler.js') }}"></script>
+</head>
+<body data-gpio-enabled="true">
+    
+    <div class="container">
+        <img src="{{ url_for('static', filename='Conditions.png') }}" class="background">
+    
+        <div class="button-container-continue">
+            <button class="continue-button" data-gpio="right">
+                <img src="{{ url_for('static', filename='cont-normal.png') }}" alt="Continue normal Button">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='quiz_logic.js') }}"></script>
+</head>
+<body>
+
+    <!-- Fullscreen Overlay for Selecting Question Set -->
+    <div id="question-set-overlay" class="overlay">
+        <div class="overlay-content">
+            <h2>Select Your Question Set</h2>
+            <button class="set-button" onclick="selectQuestionSet(1)">Question Set 1</button>
+            <button class="set-button" onclick="selectQuestionSet(2)">Question Set 2</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='bg-quiz.png') }}" class="background">
+             <!-- Pacman Container -->
+       <div class="pacman-container">
+        <div class="pacman">
+            <div class="pacman-top"></div>
+            <div class="pacman-bottom"></div>
+            <div class="feed"></div>
+        </div>
+       
+        <!-- Ghost image -->
+        <div class="ghost-container"></div>
+         </div>
+        <!-- Question Box -->
+        <div class="question-box">
+            <p id="question-text"></p>
+        </div>
+
+        <!-- Options Wrapper -->
+        <div class="options-wrapper">
+            <div class="options">
+                <!-- Left Option -->
+                <div class="option-box left-option"">
+                    <span id="left-text" class="option-text"></span>
+                </div>
+
+                <!-- Right Option -->
+                <div class="option-box right-option"">
+                    <p id="right-text" class="option-text"></p>
+                </div>
+            </div>
+
+            <!-- Buttons for Selection -->
+            <!-- Buttons for Selection (Positioned Outside Options) -->
+            <div class="button-container">
+                <!-- Left Button -->
+                <button id="left-button" class="option-button"></button>
+
+                <!-- Right Button -->
+                <button id="right-button" class="option-button"></button>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
