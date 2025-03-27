@@ -1,9 +1,3 @@
-"""
-Privacy-Pac Flask Application
-Author: ngeorge4
-Current Date: 2025-03-20 04:40:19 UTC
-"""
-
 import sqlite3
 import os
 import time
